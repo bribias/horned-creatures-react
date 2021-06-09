@@ -84,7 +84,7 @@ export default class App extends Component {
             </select>
           </label>
         </form>
-        <ImageList data1={filteredHorns, filteredKeyword, filteredData} />
+        <ImageList data={filteredHorns, filteredKeyword, filteredData} />
 
       </div>
     );
