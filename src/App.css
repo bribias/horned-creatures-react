@@ -43,6 +43,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('./bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
 }
 img{
     width: 350px;
