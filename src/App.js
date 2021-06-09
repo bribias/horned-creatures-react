@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import { Component } from 'react';
 import './App.css';
 import Header from './Header.js';
@@ -11,15 +12,15 @@ export default class App extends Component {
     filteredKeyword: '',
   };
 
-  handleHornChange = e => {
+  handleHornChange = (e) => {
     this.setState({ fliteredHorns: e.target.value })
   };
 
-  handleKeywordChange = e => {
+  handleKeywordChange = (e)=> {
     this.setState({ filteredKeyword: e.target.value })
   };
 
-  handleFilteredChange = e => {
+  handleFilteredChange = (e) => {
     this.setState({ filteredKeyword: e.target.value })
   };
 
@@ -35,7 +36,7 @@ export default class App extends Component {
     if (this.state.filteredKeyword) {
       filteredKeyword = filteredKeyword.filter(animals => this.state.filteredKeyword === animals.keyword)
     }
-    
+
     let filteredData = data;
     const objectData = Object.keys(filteredData);
     if (this.state.filteredData) {
@@ -48,7 +49,7 @@ export default class App extends Component {
         <form>
           <label>
             <select onChange={this.handleHornChange}>
-              <option value=''>E V E R Y T H I N G</option>
+              <option value='0'>E V E R Y T H I N G</option>
               <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3'>3</option>
@@ -59,7 +60,7 @@ export default class App extends Component {
         <form>
           <label>
             <select onChange={this.handleKeywordChange}>
-              <option value=''>E V E R Y T H I N G</option>
+              <option value='0'>E V E R Y T H I N G</option>
               <option value='narwhal'>Narwhal</option>
               <option value='rhino'>Rhino</option>
               <option value='unicorn'>Unicorn</option>
@@ -78,12 +79,12 @@ export default class App extends Component {
           <label>
             <select onChange={this.handleFilteredChange}>
               {
-                objectData.map(animals => <option>{ objectData}</option>)
+                objectData.map(animals => <option>{objectData}</option>)
               }
             </select>
           </label>
         </form>
-        <ImageList data={filteredHorns, filteredKeyword, filteredData} />
+        <ImageList data1={filteredHorns, filteredKeyword, filteredData} />
 
       </div>
     );
