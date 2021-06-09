@@ -22,34 +22,8 @@ header {
     text-shadow: 10px 12px rgba(13, 48, 59, 0.767);
 }
 
-a {
-    color: rgba(255, 255, 255, 0.801);
-    font-size: 30px;
-    text-shadow: 2px 5px rgb(5, 34, 44);
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 200px;
-}
-
 img{
     width: 350px;
     height: 300px;
     opacity: 90%;
-}
-
-table {
-    border: solid 1px rgba(240, 237, 237, 0.671);
-}
-
-th {
-    border: solid 1px rgba(240, 237, 237, 0.671);
-}
-
-td {
-    border: solid 1px rgba(240, 237, 237, 0.671);
 }
