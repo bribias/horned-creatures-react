@@ -48,6 +48,7 @@ body {
     background-size: contain;
     background-attachment: fixed;
     background-position: center;
+    color: rgba(255, 255, 255, 0.767);
 }
 img{
     width: 350px;
@@ -55,4 +56,5 @@ img{
     border-radius: 30px;
     border: 2px solid rgba(137, 43, 226, 0.623);
     box-shadow: 5px 5px rgba(125, 190, 192, 0.356);
+    opacity: 90%;
 }

@@ -6,7 +6,7 @@ export default class KeywordDropdown extends Component {
                 <label>
                 <select onChange={this.props.handleKeywordChange}>
 
-                        <option value=''>E V E R Y T H I N G</option>
+                        <option value=''>C R E A T U R E S</option>
                         <option value='narwhal'>Narwhal</option>
                         <option value='rhino'>Rhino</option>
                         <option value='unicorn'>Unicorn</option>

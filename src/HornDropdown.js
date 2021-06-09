@@ -6,7 +6,7 @@ export default class HornDropdown extends Component {
                 <label>
                 <select onChange={this.props.handleHornChange}>
                     
-                        <option value=''>E V E R Y T H I N G</option>
+                        <option value=''>H O R N S</option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
