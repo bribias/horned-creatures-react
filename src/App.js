@@ -12,18 +12,13 @@ export default class App extends Component {
     filteredKeyword: '',
   };
 
-  handleHornChange = (e) => {
+  handleHornChange = e => {
     this.setState({ fliteredHorns: e.target.value })
   };
 
-  handleKeywordChange = (e)=> {
+  handleKeywordChange = e => {
     this.setState({ filteredKeyword: e.target.value })
   };
-
-  handleFilteredChange = (e) => {
-    this.setState({ filteredKeyword: e.target.value })
-  };
-
 
   render() {
 
@@ -37,30 +32,24 @@ export default class App extends Component {
       filteredKeyword = filteredKeyword.filter(animals => this.state.filteredKeyword === animals.keyword)
     }
 
-    let filteredData = data;
-    const objectData = Object.keys(filteredData);
-    if (this.state.filteredData) {
-      filteredData = filteredData.filter(animals => this.state.filteredData === objectData)
-    }
-
     return (
       <div>
         <Header />
-        <form>
+                <form>
           <label>
             <select onChange={this.handleHornChange}>
-              <option value='0'>E V E R Y T H I N G</option>
+              <option value=''>E V E R Y T H I N G</option>
               <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3'>3</option>
-              <option value='100'>100</option>
+              <option value='100'>M A N Y</option>
             </select>
           </label>
         </form>
         <form>
           <label>
-            <select onChange={this.handleKeywordChange}>
-              <option value='0'>E V E R Y T H I N G</option>
+            <select onChange={this.handleChange2}>
+              <option value=''>E V E R Y T H I N G</option>
               <option value='narwhal'>Narwhal</option>
               <option value='rhino'>Rhino</option>
               <option value='unicorn'>Unicorn</option>
@@ -75,17 +64,7 @@ export default class App extends Component {
             </select>
           </label>
         </form>
-        <form>
-          <label>
-            <select onChange={this.handleFilteredChange}>
-              {
-                objectData.map(animals => <option>{objectData}</option>)
-              }
-            </select>
-          </label>
-        </form>
-        <ImageList data={filteredHorns, filteredKeyword, filteredData} />
-
+        <ImageList data={filteredHorns, filteredKeyword} />
       </div>
     );
   }
